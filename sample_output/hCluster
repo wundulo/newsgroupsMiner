@@ -1,0 +1,250 @@
+***************************************************************
+hClustering
+i =  0
+['rec.motorcycles', 'comp.sys.mac.hardware', 'talk.politics.misc', 'soc.religion.christian', 'comp.graphics', 'sci.med', 'talk.religion.misc', 'comp.windows.x', 'comp.sys.ibm.pc.hardware', 'talk.politics.guns', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.crypt', 'sci.space', 'misc.forsale', 'rec.sport.hockey', 'rec.sport.baseball', 'sci.electronics', 'rec.autos', 'talk.politics.mideast']
+parent :  co&&sc
+right :  sci.crypt
+left :  comp.sys.ibm.pc.hardware
+['rec.motorcycles', 'comp.sys.mac.hardware', 'talk.politics.misc', 'soc.religion.christian', 'comp.graphics', 'sci.med', 'talk.religion.misc', 'comp.windows.x', 'talk.politics.guns', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'misc.forsale', 'rec.sport.hockey', co&&sc, 'rec.sport.baseball', 'sci.electronics', 'rec.autos', 'talk.politics.mideast']
+
+
+Tree: 
+co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ None
+
+
+
+i =  0
+['rec.motorcycles', 'comp.sys.mac.hardware', 'talk.politics.misc', 'soc.religion.christian', 'comp.graphics', 'sci.med', 'talk.religion.misc', 'comp.windows.x', 'talk.politics.guns', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'misc.forsale', 'rec.sport.hockey', co&&sc, 'rec.sport.baseball', 'sci.electronics', 'rec.autos', 'talk.politics.mideast']
+parent :  co&&ta
+right :  talk.politics.mideast
+left :  co&&sc
+['rec.motorcycles', 'comp.sys.mac.hardware', 'talk.politics.misc', 'soc.religion.christian', 'comp.graphics', 'sci.med', 'talk.religion.misc', 'comp.windows.x', 'talk.politics.guns', 'alt.atheism', 'comp.os.ms-windows.misc', co&&ta, 'sci.space', 'misc.forsale', 'rec.sport.hockey', 'rec.sport.baseball', 'sci.electronics', 'rec.autos']
+
+
+Tree: 
+co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ None
+
+
+
+i =  0
+['rec.motorcycles', 'comp.sys.mac.hardware', 'talk.politics.misc', 'soc.religion.christian', 'comp.graphics', 'sci.med', 'talk.religion.misc', 'comp.windows.x', 'talk.politics.guns', 'alt.atheism', 'comp.os.ms-windows.misc', co&&ta, 'sci.space', 'misc.forsale', 'rec.sport.hockey', 'rec.sport.baseball', 'sci.electronics', 'rec.autos']
+parent :  re&&co
+right :  comp.sys.mac.hardware
+left :  rec.motorcycles
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'rec.autos', 'talk.politics.guns', re&&co, 'sci.electronics', 'sci.med', co&&ta]
+
+
+Tree: 
+re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'rec.autos', 'talk.politics.guns', re&&co, 'sci.electronics', 'sci.med', co&&ta]
+parent :  re&&re
+right :  re&&co
+left :  rec.autos
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', 'talk.religion.misc', re&&re, 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'talk.politics.guns', 'sci.electronics', 'sci.med', co&&ta]
+
+
+Tree: 
+re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', 'talk.religion.misc', re&&re, 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'talk.politics.guns', 'sci.electronics', 'sci.med', co&&ta]
+parent :  re&&co
+right :  co&&ta
+left :  re&&re
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'talk.politics.guns', 'sci.electronics', 'sci.med']
+
+
+Tree: 
+re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'misc.forsale', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'talk.politics.guns', 'sci.electronics', 'sci.med']
+parent :  mi&&ta
+right :  talk.politics.guns
+left :  misc.forsale
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'sci.electronics', 'sci.med', mi&&ta]
+
+
+Tree: 
+mi&&ta / talk.politics.guns / \ \ misc.forsale / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'sci.electronics', 'sci.med', mi&&ta]
+parent :  sc&&mi
+right :  mi&&ta
+left :  sci.med
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', sc&&mi, re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'sci.electronics']
+
+
+Tree: 
+sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', sc&&mi, re&&co, 'talk.religion.misc', 'alt.atheism', 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball', 'sci.electronics']
+parent :  ta&&al
+right :  alt.atheism
+left :  talk.religion.misc
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', sc&&mi, re&&co, 'comp.os.ms-windows.misc', ta&&al, 'sci.space', 'rec.sport.baseball', 'sci.electronics']
+
+
+Tree: 
+ta&&al / alt.atheism / \ \ talk.religion.misc / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', sc&&mi, re&&co, 'comp.os.ms-windows.misc', ta&&al, 'sci.space', 'rec.sport.baseball', 'sci.electronics']
+parent :  ta&&sc
+right :  sci.electronics
+left :  ta&&al
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, sc&&mi, re&&co, 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball']
+
+
+Tree: 
+ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, sc&&mi, re&&co, 'comp.os.ms-windows.misc', 'sci.space', 'rec.sport.baseball']
+parent :  sc&&sc
+right :  sci.space
+left :  sc&&mi
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, re&&co, sc&&sc, 'comp.os.ms-windows.misc', 'rec.sport.baseball']
+
+
+Tree: 
+sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, re&&co, sc&&sc, 'comp.os.ms-windows.misc', 'rec.sport.baseball']
+parent :  sc&&re
+right :  rec.sport.baseball
+left :  sc&&sc
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, re&&co, 'comp.os.ms-windows.misc', sc&&re]
+
+
+Tree: 
+sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', 'rec.sport.hockey', ta&&sc, re&&co, 'comp.os.ms-windows.misc', sc&&re]
+parent :  re&&sc
+right :  sc&&re
+left :  rec.sport.hockey
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, re&&sc, 'comp.os.ms-windows.misc']
+
+
+Tree: 
+re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ None
+
+
+
+i =  0
+['soc.religion.christian', 'talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, re&&sc, 'comp.os.ms-windows.misc']
+parent :  so&&re
+right :  re&&sc
+left :  soc.religion.christian
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, so&&re, 'comp.os.ms-windows.misc']
+
+
+Tree: 
+so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ None
+
+
+
+i =  0
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, so&&re, 'comp.os.ms-windows.misc']
+parent :  so&&co
+right :  comp.os.ms-windows.misc
+left :  so&&re
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, so&&co]
+
+
+Tree: 
+so&&co / comp.os.ms-windows.misc / \ \ so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ None
+
+
+
+i =  0
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&sc, re&&co, so&&co]
+parent :  ta&&re
+right :  re&&co
+left :  ta&&sc
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&re, so&&co]
+
+
+Tree: 
+ta&&re / re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ \ ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ None
+
+
+
+i =  0
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&re, so&&co]
+parent :  ta&&so
+right :  so&&co
+left :  ta&&re
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&so]
+
+
+Tree: 
+ta&&so / so&&co / comp.os.ms-windows.misc / \ \ so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ \ ta&&re / re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ \ ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ None
+
+
+
+i =  0
+['talk.politics.misc', 'comp.graphics', 'comp.windows.x', ta&&so]
+parent :  ta&&co
+right :  comp.graphics
+left :  talk.politics.misc
+['comp.windows.x', ta&&co, ta&&so]
+
+
+Tree: 
+ta&&co / comp.graphics / \ \ talk.politics.misc / \ None
+
+
+
+i =  0
+['comp.windows.x', ta&&co, ta&&so]
+parent :  ta&&ta
+right :  ta&&so
+left :  ta&&co
+['comp.windows.x', ta&&ta]
+
+
+Tree: 
+ta&&ta / ta&&so / so&&co / comp.os.ms-windows.misc / \ \ so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ \ ta&&re / re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ \ ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ \ ta&&co / comp.graphics / \ \ talk.politics.misc / \ None
+
+
+
+i =  0
+['comp.windows.x', ta&&ta]
+parent :  co&&ta
+right :  ta&&ta
+left :  comp.windows.x
+[co&&ta]
+
+
+Tree: 
+co&&ta / ta&&ta / ta&&so / so&&co / comp.os.ms-windows.misc / \ \ so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ \ ta&&re / re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ \ ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ \ ta&&co / comp.graphics / \ \ talk.politics.misc / \ \ comp.windows.x / \ None
+
+
+
+co&&ta / ta&&ta / ta&&so / so&&co / comp.os.ms-windows.misc / \ \ so&&re / re&&sc / sc&&re / rec.sport.baseball / \ \ sc&&sc / sci.space / \ \ sc&&mi / mi&&ta / talk.politics.guns / \ \ misc.forsale / \ \ sci.med / \ \ rec.sport.hockey / \ \ soc.religion.christian / \ \ ta&&re / re&&co / co&&ta / talk.politics.mideast / \ \ co&&sc / sci.crypt / \ \ comp.sys.ibm.pc.hardware / \ \ re&&re / re&&co / comp.sys.mac.hardware / \ \ rec.motorcycles / \ \ rec.autos / \ \ ta&&sc / sci.electronics / \ \ ta&&al / alt.atheism / \ \ talk.religion.misc / \ \ ta&&co / comp.graphics / \ \ talk.politics.misc / \ \ comp.windows.x / \ None

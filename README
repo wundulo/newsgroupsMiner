@@ -1,0 +1,155 @@
+newsgroupsMiner is a data mining tool designed to analyze the dataset from 20-Newsgroups. It uses weighted document frequency tables to estimate and cluster useful data into usable information.
+
+Download dataset from http://kdd.ics.uci.edu/databases/20newsgroups/20newsgroups.html
+
+
+*** article.py ***
+
+Description:
+Data-mining program that contains methods to extract and classify any given file or article of a directory based on TFIDF scoring
+
+How to use:
+$ python article.py [source directory]
+
+Methods:
+- class article
+  create an instance of each article is created when traversing through all newsgroups
+  each object holds the following attributes:
+  - article name
+  - newsgroup it belongs to
+  - raw text
+  - list of processed text
+  - TFIDF score dictionary
+  - TF score dictionary
+  
+- computeTFIDF()
+  compute the TFIDF score of this article to given corpus
+  input:
+  - DF dictionary (document frequency)
+  - corpus size
+  output:
+  - TFIDF dictionary
+  
+- computeIDF()
+  calculate inverted document frequency scores of a given word
+  smoothing is applied when 0 division occurs
+  input:
+  - corpus size
+  - document frequency dictionary
+  - target word
+  output:
+  - inverted document frequency dictionary
+
+- computeDocumentFrequency()
+  compute IDF score of each subdirectory of a given directory
+  input:
+  - source directory
+  output:
+  - dictionary of newsgroups mapped to their IDF scores
+  - e.g. { "sports" : {"swim":1.22, "ball":3.01}, "computer":{"monitor":3.21, ... }}
+  
+- computeNewsGroupCategory()
+  compute each newsgroup's TFIDF score of a given directory
+  input:
+  - source directory
+  output:
+  - directory of newsgroups mapped to their TFIDF scores
+  - e.g. { "sports" : {"swim":1.22, "ball":3.01}, "computer":{"monitor":3.21, ... }}
+    
+- computeTFIDFCategory()
+  compute top n TFIDF scores of a given directory
+  input:
+  - source directory
+  - pickle result (defaults = True)
+  output:
+  - dictionary of document frequency, list of articles, directory TFIDF scores
+  
+- classify()
+  estimate the newsgroup which a given article should belong to
+  input:
+  - article object
+  - source directory
+  output:
+  - estimated (by max()) newsgroup and its cosine similarity score
+
+- cosineSimilarity()
+  compute cosine similarity score of two document frequency dicts
+  input:
+  - two document frequency dictionaries
+  output:
+  - cosine similarity value, 1 means most similar, 0 means independent
+  
+- hCluster():
+  build denogram by comparing cosine similarity scores of all categories
+  input:
+  - dictionary of all newsgroups' TFIDF scores
+  output:
+  - root of denogram tree
+  
+- clean()
+  strip non-characters and stop_words
+  input:
+  - a list of raw articles
+  output:
+  - a list of articles without stop words and non characters
+  
+- count_words()
+  update article TF and document frequency dictionaries 
+  input :
+  - article object
+  - document frequency dictionary
+  output :
+  - updated document frequency dictionary
+    
+- merge()
+  merge and accumulate two dictionaries
+  linear runtime
+  input :
+  - two dictionaries
+  output :
+  - merged dictionary, values in common are accumulated
+  
+- sort_dict_by_value()
+  keeping top n results of given dictionary
+  input :
+  - dictionary
+  - decending order (default to True)
+  - top n results (default to 1000)
+  output :
+  - top n result of the input dictionary
+
+*** tester.py ***
+
+How to use:
+$ python tester.py --num-files=[int] [source directory]
+
+Description:
+tester.py will randomly select n number of files from given source directory. For each file, program runs classify() to compute the TFIDF score of each newsgroup with the article. The newsgroup with highest TFIDF score will be selected as the estimated class of article.
+
+*** tree.py ***
+
+How to use:
+Used in hCluster() in article.py
+
+Description:
+- Node class
+  node object that stores a value, left and right children
+  
+- assertCreateNode()
+  create a node for input object if it is not a node already
+  input :
+  - unknown typed object
+  output :
+  - tree node object
+    
+- printChildren()
+  print out all decendents of a given parent node
+  input :
+  - a parent node
+  output :
+  - print out of the input node's decendents
+
+Possible improvement:
+
+- classification result get more accurate as the data set gets bigger.
+- e.g. keeping top 1000 TFIDF score instead of 100, sourcing more articles
